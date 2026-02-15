@@ -189,8 +189,11 @@ const x=[1,3,3,4]
 
 
 
+// js set
+const mySet=([1,2,3,])
+// const mySet=new Set([1,2,3,]) same as the one above not mutable
 
-
+console.log(mySet)
 
 
 
