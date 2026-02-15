@@ -48,7 +48,7 @@
 //the last assign value to it
 // example:
 
-// console.log(x);
+// console.log(x); if statement and function will give you the exact same result because its block
 // if (true) {
 //   var x = 3;
 //   console.log(x);
@@ -56,3 +56,158 @@
 // console.log(x);
 // x=4
 // console.log(x);
+
+
+
+//js type conversion
+
+// this happens becuase js turn anything that is concat with string as string so if we do
+// numeric + string it will turn that into string, something similar happens to numiric and bool
+
+// console.log(3+'3') //33
+// console.log('3'+3)  //33
+// console.log(3+3)  //6
+// console.log(3+true)  //4 turn true to 1
+// console.log(3+true)  //3 turn true to 0
+
+// if you use math operator other than + it will turn all even string into numeric data type
+
+// console.log(3*'3') //9
+// console.log('3'-3)  //0
+// console.log(3/3)  //1
+// console.log(3*true)  //4 turn true to 1
+// console.log(3-true)  //0 turn true to 0
+
+// console.log(3*'hello') //NAN becuase we cant turn hello to numeric
+
+
+
+// manual type conversion
+// const x='323'
+// const y=2
+//  console.log(Number(x)*y) //646
+
+// const x='323awef'
+// const y=2
+//  console.log(parseInt(x)*y) //646, becuase parseint just get the number part of string it ignored the awef
+
+ // converter
+// String(var)
+// Number(var)
+// parseFloat(var)
+// parseInt(var)
+
+
+
+
+// terninary
+    //similar to php terninary
+// const cond=2>3? 'fuck':'no'
+// console.log(cond)
+
+
+//i will not include array function like push,splice because i will forgot about it, i learn it in
+// php but i fogot about it adn never even use it so i will just search it rather than put it here
+//i will only include things that i dont know or never incounter before 
+
+
+// const [x,y]=[1,3,3,4]
+
+// console.log(x,y) =1 3
+
+// ...y is a spread operator take all the reminder in array that is not already assign to x and x2, the ...y must
+// always be the last one it connot be in the middle or first since it will just tkae all of it
+// it will give this warning A rest element must be last in a destructuring pattern
+// const [x,x2,...y]=[1,3,3,4]
+
+// console.log(x,x2,y)
+
+
+const x=[1,3,3,4]
+// y this will refernece x and if we change what is in y it will also affect x because they are the same which is not good
+// const y=x 
+//          output [ 1, 3, 3, 4, 'hello' ] [ 1, 3, 3, 4, 'hello' ]
+ 
+// so instead of doing it const y=x where we just reference x through y which is liking poiting it itself
+// we can instead copy x by using the spread operator
+
+// const y =[...x] 
+// //output [ 1, 3, 3, 4 ] [ 1, 3, 3, 4, 'hello' ]
+
+// y.push('hello')
+// console.log(x,y)
+
+
+//json
+//simlar to dic but more powerful
+
+// const obj={
+//     name: 'fuck',
+//     age:32,
+//     sayhello:function(){
+//         return 'hello'
+//     },
+//     career:{
+//         oc:'dev',
+//         status:'signle'
+//     }
+// }
+
+// console.log(obj.name)
+// console.log(obj.sayhello)
+// console.log(obj.career)
+// console.log(obj.career.oc) //accessing what is inside an nested obj
+
+// // loop through obj , in object data type we use 'in' and in array we use 'of'
+// for(let kay in obj){
+// console.log(kay)
+// }
+
+
+// const obj2={
+//     c:'black',
+//     arr:[1,23,4,]
+//     }
+
+// //combine two object
+//     // -note if you have name in obj2 and already have it in obj it will overide the first one
+//         //and display the second one , this works for obj and array store in obj, so becarefull 
+//         //if something is mutable , look at example
+
+// const obj3={...obj,...obj2}
+
+// obj3.career.info='tech'
+
+// // console.log(obj,obj3)
+
+// // destructuring object
+
+// const {name,arr}=obj3
+//what this will do is only take the name and arr from obj3 and put in const key
+
+// console.log(name,arr) //output :fuck [ 1, 23, 4 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
