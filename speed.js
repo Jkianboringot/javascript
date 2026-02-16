@@ -189,18 +189,26 @@ const x=[1,3,3,4]
 
 
 
-// js set
-const mySet=([1,2,3,])
-// const mySet=new Set([1,2,3,]) same as the one above not mutable
+// // js set
+// const mySet=([1,2,3,])
+// // const mySet=new Set([1,2,3,]) same as the one above not mutable
 
-console.log(mySet)
+// console.log(mySet)
+
+// // maps
+// const myMap=new Map()
+// const numberMap= new Map([[1,'one'],[2,'two']])
+
+// myMap.set(4,'four')
+// myMap.delete(4)
 
 
+// // console.log(numberMap.get(1)) get specific value
 
-
-
-
-
+// // console.log(numberMap)
+// for(const [key,value] of numberMap){
+//     console.log(key,value)
+// }
 
 
 
