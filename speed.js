@@ -212,13 +212,129 @@ const x=[1,3,3,4]
 
 
 
+// try{
+//  try something first
+// }
+// catch(){
+//  only happen when error happend
+// }finally{
+//     will run no matter one
+// }
+
+
+
+// function 
+    //different types of function
+
+// function greet(name){
+//     console.log(name)
+// }
+
+// const greet = function (name){
+
+// }
+
+// const greet =(name)=>{
+//         return () => name
+// }
+
+// console.log(greet('fuck')())
+    // if the second () is not put it will not print the parameter it will just give you [Function (anonymous)] 
+
+
+// accept any number of parameter like *arg in python
+// function greet(...num){
+//     console.log(num)
+// }
 
 
 
 
+// Map,filter,reduce arrays
+
+// what map does here is it apply the function to every index value just like in php, how it works is we 
+//reference what we are gonna map, pass an function and do the operatoin inf the function, the func cna be a 
+//a normal function it does not have to be arrow function.
+
+// and if you are wondering if how does map get the value , let say its automatically pass into it by the reference
+// and we just store it in a variable through the parameter, think of it like map takes in the value of a variable/array/Object
+// as a parameter
+
+// const num=[1,3,4,4,5]
+// const double=num.map((num)=>num*2)
+// const numst=num.map((num)=>num+'hello')
+
+// console.log(double)[ 2, 6, 8, 8, 10 ]
+// console.log(numst)[ '1hello', '3hello', '4hello', '4hello', '5hello' ]
 
 
+// const user=[{
+//     name:'fuck',age:34
+// },{
+//     name:'shit',age:3
+// }]
 
+// const names=user.map((i)=>i.name)
+// console.log(names) [ 'fuck', 'shit' ]
+
+
+// reduce
+//this is like a for loop iterator, its weird and i dont understand it fully but here is gpt example,its like on of those
+// challenges in code wars where you need are givin an array of [1,3,4,4,5] and you must take the first number and multiple it by 
+//it self then the result of that you store then you multiple it again with the next index so like 1*1=1 next 1*3 and so forth
+//then you sum all of the result
+/* Initial value = 0
+
+// Array: [1,3,4,4,5]
+
+// Step 1
+
+// accumulator = 0
+// current = 1
+// 0 + 1 = 1
+
+// Step 2
+
+// accumulator = 1
+// current = 3
+// 1 + 3 = 4
+
+// Step 3
+
+// accumulator = 4
+// current = 4
+// 4 + 4 = 8
+
+// Step 4
+
+// accumulator = 8
+// current = 4
+// 8 + 4 = 12
+
+// Step 5
+
+// accumulator = 12
+// current = 5
+// 12 + 5 = 17
+
+Final result → 17*/ 
+
+// const num=[1,3,4,4,5]
+// const rdouble=num.reduce((num,num2)=>num+num2,0)
+
+
+// console.log(rdouble)
+
+
+// filter
+
+//very similar to map but it like a conditional type of map it only give output that is true or false, its like an
+//foreach if combine into one
+const num=[1,3,4,5]
+const fdouble=num.filter(num=>num>=3)
+
+
+console.log(fdouble)
 
 
 
