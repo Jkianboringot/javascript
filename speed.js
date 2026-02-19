@@ -44,7 +44,7 @@
 
 // FUNCTION SCOPE this mean its globally access it can be called anywhere even when its not initialize yet,
 //when its called even without being initialize it will just give be undefined but it is still called it just
-//give an undefined value, but after it is define or initialize it become a global variable that will give 
+//give an undefined value, but after it is define or initialize it become a global variable that will give
 //the last assign value to it
 // example:
 
@@ -56,8 +56,6 @@
 // console.log(x);
 // x=4
 // console.log(x);
-
-
 
 //js type conversion
 
@@ -80,8 +78,6 @@
 
 // console.log(3*'hello') //NAN becuase we cant turn hello to numeric
 
-
-
 // manual type conversion
 // const x='323'
 // const y=2
@@ -91,25 +87,20 @@
 // const y=2
 //  console.log(parseInt(x)*y) //646, becuase parseint just get the number part of string it ignored the awef
 
- // converter
+// converter
 // String(var)
 // Number(var)
 // parseFloat(var)
 // parseInt(var)
 
-
-
-
 // terninary
-    //similar to php terninary
+//similar to php terninary
 // const cond=2>3? 'fuck':'no'
 // console.log(cond)
 
-
 //i will not include array function like push,splice because i will forgot about it, i learn it in
 // php but i fogot about it adn never even use it so i will just search it rather than put it here
-//i will only include things that i dont know or never incounter before 
-
+//i will only include things that i dont know or never incounter before
 
 // const [x,y]=[1,3,3,4]
 
@@ -122,21 +113,19 @@
 
 // console.log(x,x2,y)
 
-
-const x=[1,3,3,4]
+const x = [1, 3, 3, 4];
 // y this will refernece x and if we change what is in y it will also affect x because they are the same which is not good
-// const y=x 
+// const y=x
 //          output [ 1, 3, 3, 4, 'hello' ] [ 1, 3, 3, 4, 'hello' ]
- 
+
 // so instead of doing it const y=x where we just reference x through y which is liking poiting it itself
 // we can instead copy x by using the spread operator
 
-// const y =[...x] 
+// const y =[...x]
 // //output [ 1, 3, 3, 4 ] [ 1, 3, 3, 4, 'hello' ]
 
 // y.push('hello')
 // console.log(x,y)
-
 
 //json
 //simlar to dic but more powerful
@@ -163,7 +152,6 @@ const x=[1,3,3,4]
 // console.log(kay)
 // }
 
-
 // const obj2={
 //     c:'black',
 //     arr:[1,23,4,]
@@ -171,7 +159,7 @@ const x=[1,3,3,4]
 
 // //combine two object
 //     // -note if you have name in obj2 and already have it in obj it will overide the first one
-//         //and display the second one , this works for obj and array store in obj, so becarefull 
+//         //and display the second one , this works for obj and array store in obj, so becarefull
 //         //if something is mutable , look at example
 
 // const obj3={...obj,...obj2}
@@ -187,8 +175,6 @@ const x=[1,3,3,4]
 
 // console.log(name,arr) //output :fuck [ 1, 23, 4 ]
 
-
-
 // // js set
 // const mySet=([1,2,3,])
 // // const mySet=new Set([1,2,3,]) same as the one above not mutable
@@ -202,15 +188,12 @@ const x=[1,3,3,4]
 // myMap.set(4,'four')
 // myMap.delete(4)
 
-
 // // console.log(numberMap.get(1)) get specific value
 
 // // console.log(numberMap)
 // for(const [key,value] of numberMap){
 //     console.log(key,value)
 // }
-
-
 
 // try{
 //  try something first
@@ -221,10 +204,8 @@ const x=[1,3,3,4]
 //     will run no matter one
 // }
 
-
-
-// function 
-    //different types of function
+// function
+//different types of function
 
 // function greet(name){
 //     console.log(name)
@@ -239,21 +220,17 @@ const x=[1,3,3,4]
 // }
 
 // console.log(greet('fuck')())
-    // if the second () is not put it will not print the parameter it will just give you [Function (anonymous)] 
-
+// if the second () is not put it will not print the parameter it will just give you [Function (anonymous)]
 
 // accept any number of parameter like *arg in python
 // function greet(...num){
 //     console.log(num)
 // }
 
-
-
-
 // Map,filter,reduce arrays
 
-// what map does here is it apply the function to every index value just like in php, how it works is we 
-//reference what we are gonna map, pass an function and do the operatoin inf the function, the func cna be a 
+// what map does here is it apply the function to every index value just like in php, how it works is we
+//reference what we are gonna map, pass an function and do the operatoin inf the function, the func cna be a
 //a normal function it does not have to be arrow function.
 
 // and if you are wondering if how does map get the value , let say its automatically pass into it by the reference
@@ -267,7 +244,6 @@ const x=[1,3,3,4]
 // console.log(double)[ 2, 6, 8, 8, 10 ]
 // console.log(numst)[ '1hello', '3hello', '4hello', '4hello', '5hello' ]
 
-
 // const user=[{
 //     name:'fuck',age:34
 // },{
@@ -277,10 +253,9 @@ const x=[1,3,3,4]
 // const names=user.map((i)=>i.name)
 // console.log(names) [ 'fuck', 'shit' ]
 
-
 // reduce
 //this is like a for loop iterator, its weird and i dont understand it fully but here is gpt example,its like on of those
-// challenges in code wars where you need are givin an array of [1,3,4,4,5] and you must take the first number and multiple it by 
+// challenges in code wars where you need are givin an array of [1,3,4,4,5] and you must take the first number and multiple it by
 //it self then the result of that you store then you multiple it again with the next index so like 1*1=1 next 1*3 and so forth
 //then you sum all of the result
 /* Initial value = 0
@@ -317,24 +292,112 @@ const x=[1,3,3,4]
 // current = 5
 // 12 + 5 = 17
 
-Final result → 17*/ 
+Final result → 17*/
 
 // const num=[1,3,4,4,5]
 // const rdouble=num.reduce((num,num2)=>num+num2,0)
 
-
 // console.log(rdouble)
-
 
 // filter
 
 //very similar to map but it like a conditional type of map it only give output that is true or false, its like an
 //foreach if combine into one
-const num=[1,3,4,5]
-const fdouble=num.filter(num=>num>=3)
+// const num=[1,3,4,5]
+// const fdouble=num.filter(num=>num>=3)
+
+// console.log(fdouble)
+
+// this keyword and scope
+
+// const p={
+//     name:'fuck',
+//     greet(){
+//         console.log(`name  ${this.name}`) //this key word is just inside an object or class to refer to its own
+//         //value or variable, just think of this as the exact same as self. or $this. but instead fo class it works
+//         //on object
+//     }
+// }
+
+// p.greet()
+
+// const t={
+//     name:'t',
+//     greet(){
+//           console.log(`name  ${this.name}`)
+//     }
+//     ,
+//     arr:{y:'yes',fuck(){
+//         console.log(`works even if its like this ${this.y}`)
+//          console.log(`but this wont work becuase ${this.name}`) //because the this.name is in the parent obejct
+//          //not in the current child object
+//     }}
+// }
+
+// t.arr.fuck()   //even it has the same name as other object it will not call the same name function in p becuase t.greet
+// //will only look at the value of t
+
+// arrow function
+
+// const a={
+//     name:'fuck',
+//     greet:()=>{
+//         console.log(`name  ${this.name}`) //this will not work with arrow function is define when program awaken
+//         //or they are define or kinda like called even if you did not call them like greet(), advice do not use
+//         //arrow function with 'this keyword'
+//     }
+// }
+
+// a.greet()
+
+// // Promise
+
+// const p =new Promise((resolve,reject)=>{
+//     // asynchronus operatoin
+//     if(true){
+//         resolve(value) //fulfill the promist
+//     }
+//     else{
+//         reject(error)
+//     }
+// })
+
+// // primise is an object that represents the eventual completion or failure of an asynchronous opration
+
+// // promise is use when you dont nkow how long somehitng is gonna take to complete, like taking value in api, reason for that is
+// // as soon as you send requiest to api promise becomes an pendtding state, and either you success or resolve the issue
+// // or you dont get anything back and throw an error
+// // it sound like an transaction in sql and try block combine
+
+// const p = new Promise((resolve, reject) => {
+//   // asynchronus operatoin
+//   if (false) {
+//     resolve("good"); //fulfill the promist
+//   } else {
+//     reject("bad");
+//   }
+// });
+// //.then() is what happend if somethins is resolve
+// p.then((val) => {
+//   //this function is whats being called in resovle, so think of it like, resolve is equal to then
+//   console.log(val);
+// }).catch((val) => {
+//   //this function is whats being called in reject, so think of it like, reject is equal to catch
+//   console.log(val);
+// }).finally(()=>{
+//     console.log('alwasy') //this will always print regardless if promise is resolve or reject
+// });
+
+const p1 = Promise.resolve(3);
+const p2 = new Promise((resolve, reject) =>
+  setTimeout(resolve, 100, "resolve"),
+);
+const p3 = new Promise((resolve, reject) => setTimeout(resolve, 500, "reject"));
 
 
-console.log(fdouble)
-
-
-
+Promise.all([p1, p2, p3]) //runn all promise concurrently, or at the same time
+            //wait for all promise to resolve
+  .then((result) => {
+    console.log(result); //will not run ebcuase prmise 3 is rejecting
+  })
+  .catch((error) => console.log(error));
