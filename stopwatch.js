@@ -7,43 +7,33 @@
 // no ai you are allowed to search library for time
 
 const sw = function () {
-  let start, end;
-  this.startT = start;
-  this.endT = end;
+  
+  this.startT ;
+  this.endT ;
 
   this.startTime = function () {
+
+    if(this.startT){
+      throw new Error('started already')
+    }
+
     this.startT = new Date();
   };
 
   this.endTime = function () {
+     if(this.endT){
+      throw new Error('already stop')
+    }
     this.endT = new Date();
   };
-  this.duration = function () {
-    const el = (this.endT - this.startT) / 1000;
-    console.log(`Elapsed: ${el}s`);
-  };
+ 
 
   this.reset = function () {
-    this.startT = start;
+    this.startT = null;
+    this.endT= null
   };
 
-  Object.defineProperty(this, "startTime", {
-    get: function () {
-      this.startTime();
-    },
-    set: function (value) {
-      if (true) throw new Error("Time has started");
-    },
-  });
 
-  Object.defineProperty(this, "endTime", {
-    get: function () {
-      this.endTime();
-    },
-    set: function (value) {
-      if (!value) throw new Error("Time has Ended");
-    },
-  });
 
   Object.defineProperty(this, "duration", {
     get: function () {
@@ -55,11 +45,6 @@ const sw = function () {
     },
   });
 
-  Object.defineProperty(this, "reset", {
-    get: function () {
-      return this.reset();
-    },
-  });
 };
 
 const s = new sw();
