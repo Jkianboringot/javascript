@@ -66,4 +66,24 @@ new date store in the memory and so is this.timeStart and that pretty much maks 
 to the function, and when we start another function ednTime it dose not know anotehr new Data was 
 called becayse its out of its scope but the duration now it becuase this.startTime and end Time
 is property with value set in the functoin
+
+
+
+ok just read this bullshit, this is why i need to slowdown my writing and make sure , 
+that what i write is easy to understand, becuase i might be able to understanding it then
+but now , i wont understand shit, becuase it has been days , shit if this was ims on filament
+it will be worse becuase i have only use it for a week, and i have stop usign it fro a month, so i have
+too pretty much relearn the everything, but i ahve build the pathway so it will be faster but still not good
+i can more easily get that knowledge back if i just write a good comment so that i either done have
+a hard time relearning again or understanding it, ok so slowdonw make sure what you right 
+can be understand by future you
+
+
+i get the jest of it but it could be better, next time we need to follow of writing structure that we 
+will follow always
+
+
+
+
+
 */

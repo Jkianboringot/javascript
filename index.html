@@ -10,11 +10,63 @@
 
 
 
-<div>
-  <span id="hi" data-test="fuckyou"> hi </span>
-  <span id="bye" class="bye">bye</span>
-</div>
+  <h1 id="hi" data-test="fuckyou"> hi </h1>
+  <button> get message</button>
 
+<script>
+  const header=document.querySelector('h1')
+  const button=document.querySelector('button')
+
+  button.addEventListener('click',()=>{
+    fetch('http://localhost:3000/message')
+    .then(i=>{
+      if(!i.ok){
+        throw new Error(`server error ${i.status} ${i.statusText}`)
+      }
+
+
+      // header.textContent=data.message
+      // Problem: 
+      //   -ok why does this not work when we put it here, it work when we put it in the second
+      // .then but not here
+    
+        // Here’s what happens:
+
+              // 1.First .then returns a Promise (from i.json())
+
+              // 2.JS waits for it to resolve
+
+              // 3.Second .then receives the actual parsed data
+
+      // ok from what i can understand, the reason why it only work with two then is becuase fetch itself 
+      // return a promise that the url was successfull then we take the data from it and give it to the next then as a
+      // simple new promise with the data this time , e.g
+      // const event = new Promise((resolve,reject)=>{
+//     const name='pedro'
+//     if(name==='pedro'){
+//         resolve(name)
+//     }
+//     else{
+//         reject()
+//     }
+// })
+  
+
+      // so pretty much like this, fetch return a promise then we use .then to judege wether it give 
+      // us something if it did, we take the parameter or data of it and give it agian to the next .then
+      // and now this time we can accesss the data with this second .then
+
+      
+      return i.json() //this part i dont get 
+    })
+    .then(data=>{
+      header.textContent=data.message
+    })
+    .catch(e=>{
+      console.log(e)
+    })
+  })
+</script>
 
 
 
@@ -57,5 +109,5 @@
 
   <!-- <script src="script.js"></script> -->
 
-  <script src="stopwatch.js"></script>
+  <script src="express-node.js"></script>
 </html>

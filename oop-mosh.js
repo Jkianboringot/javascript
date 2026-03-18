@@ -24,7 +24,7 @@
 
 // // // // // // c.d();
 
-// // // // // //factory function
+// // // // // //factory function - this is more like obejcts
 // // // // // // function createC(rad){
 // // // // // //   return {
 // // // // // //   rad, //=> r:rad
@@ -42,7 +42,7 @@
 // // // // // // const c =createC(4)
 // // // // // // console.log(c)
 
-// // // // // //constructer function
+// // // // // //constructer function - this is more like class
 // // // // // function Circle(r){
 // // // // //   console.log('this',this)
 // // // // //   this.r =r;
@@ -79,23 +79,23 @@
 // // // // // console.log(x)
 // // // // // //knowing this types are important i just know this is were most bugs happend fuck
 
-// // // // function Circle(r){
-// // // //   console.log('this',this)
-// // // //   this.r =r;
-// // // //   this.draw=function(){
-// // // //     console.log('draw');
-// // // //   }
-// // // // }
+// function Circle(r){
+//   console.log('this',this)
+//   this.r =r;
+//   this.draw=function(){
+//     console.log('draw');
+//   }
+// }
 
-// // // // const a = new Circle(10)
-// // // // const h=a.location={x:1}
-// // // // console.log(h)
+// const a = new Circle(10)
+// const h=a.location={x:1}
+// console.log(h)
 
-// // // // const k='hola'
-// // // // console.log(a[k]={k:'hole'})
+// const k='hola'
+// console.log(a['hola']={k:'hole'})
 // // // // // this is better than a.location becuase this is more robust and dynamic compate to a.location
-// // // // // also we can do think like that a[k] in a.k is not a think becuase a.k we are access the Object
-// // // // // not inputing value
+// // // // // also we can do think like that a['hola'] ,also a.'hola' is not a thing becuase with a.k we are access the Object
+// // // // // not inputing value like a['hola]
 
 // // // function Circle(r){
 // // //   console.log('this',this)
@@ -129,7 +129,7 @@
 // //   const op =function(c){
 // //     console.log('op')
 // //   }
-// //   ///this can nolonger be able to be able to access outside,a.op()
+// //   ///this can no longer have access outside of,a.op()
 
 // //   this.r =r;
 // //   this.draw=function(){
@@ -149,7 +149,8 @@
 //   let dl = { x: 0, y: 0 };
 //   // this.getdl= dl
 //   // this is not good because it can change the value a.getdl={k:2} { k: 2 }, if you
-//   // only want to show it done use this.getdl=dl becuase dl is an object
+//   // only want to show it done use this.getdl=dl just point to the dl and becuase dl is an object or reference type
+//which cant be change unless its copied first then that other copy can be modified, this is also the practice
 
 //   this.getdl = function () {
 //     return dl;
