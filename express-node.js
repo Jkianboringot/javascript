@@ -32,12 +32,16 @@ app.use(cors({
     origin:['http://localhost:5500','http://127.0.0.1:5500']
 }))
 
+// this enable body parsing, because express cant automatically read request in the json body, meaning express has no 
+// way of understanding what is send to it to enable it we do->
+app.use(express.json())
+    // what this do is when req comes in pls parse that json data and put the result in json body
+    // not my own word, this is important because without anything you send will be undefined not matter what
+    
 
 
 
-
-
-//routes
+//routes get
 app.get('/car',(req,res)=>{
     res.send('hellow from express')
 })
@@ -58,6 +62,22 @@ app.get('/message',(req,res)=>{
     res.json({message:'you have recieve the message'})
 })
 
+// route post
+
+app.post('/message',(req,res)=>{
+    const {n,t}=req.body
+    const name =n
+    const text =t
+ const arr={ name: n, message: 'Message sent' , text: t}
+    
+    console.log('response',n,t)
+    res.json(arr)
+
+
+    // res.json({message:'Message sent'})
+
+    //ok if its like this it work maybe becuase it need ot be distructure too
+})
 
 
 app.listen(3000,()=>{

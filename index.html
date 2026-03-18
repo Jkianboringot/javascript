@@ -7,9 +7,12 @@
     <title>learning js</title>
   </head>
   <body>
+    <h1>hi</h1>
+    <h2>name</h2>
+    <h3>message</h3>
 
-
-
+    <!-- get routes -->
+    <!-- 
   <h1 id="hi" data-test="fuckyou"> hi </h1>
   <button> get message</button>
 
@@ -66,21 +69,51 @@
       console.log(e)
     })
   })
-</script>
+</script> -->
 
+    <form action="" id="contact">
+      <input type="text" id="name" />
+      <textarea name="" id="message"></textarea>
+      <button>Submit</button>
+    </form>
 
+    <script>
+      const form = document.querySelector('form')
+      const name =document.querySelector('input')
+      const text=document.querySelector('textarea')
+      const h1=document.querySelector('h1')
+      const h2=document.querySelector('h2')
+      const h3=document.querySelector('h3')
 
+      form.addEventListener('submit',(e)=>{
+        e.preventDefault()
 
+        const n =name.value
+        const t =text.value
 
+           fetch('http://localhost:3000/message',{
+            method:'POST',
+            headers:{
+              'Content-Type':'application/json'
+            },
+            body:JSON.stringify({n,t})
+           })
+            .then(res=>res.json())
+           .then(data=>{
+            // const {message,name,text}=
+            h2.textContent=data.name
+            h1.textContent=data.message
+            h3.textContent=data.text
+            console.log(data)
 
-
-
-
-
-
-
-
-
+        })
+        .catch(e=>{
+          console.log(e)
+        }
+           )
+          //  i have no clue what is happening here
+      })
+    </script>
 
     <!-- cookie clicker -->
     <!-- <div class="container">
