@@ -66,8 +66,8 @@ app.get('/message',(req,res)=>{
 
 app.post('/message',(req,res)=>{
     const {n,t}=req.body
-    const name =n
-    const text =t
+
+    
  const arr={ name: n, message: 'Message sent' , text: t}
     
     console.log('response',n,t)
