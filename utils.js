@@ -1,5 +1,5 @@
 export const fuck=()=>{
-    console.log('fuck')
+    console.log('fuck you')
 //  when this   "type":"module", was not in package.json output has null prop [Module: null prototype] { fuck: [Function: fuck] }
 }
 
